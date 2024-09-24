@@ -1,4 +1,4 @@
-<h1> SubEase </h1>
+<h1> <b>SubEase</b> </h1>
 
 SubEase is a SaaS product designed to help users track and manage their subscriptions effortlessly. Whether it’s OTT platforms, productivity tools, or other recurring services, SubEase offers a simple dashboard to provide insights into your spending and helps you stay on top of your subscriptions.
 
@@ -19,16 +19,16 @@ SubEase is a SaaS product designed to help users track and manage their subscrip
 
 ## Installation
 1. Clone the repository:
-```bash
-git clone https://github.com/ayushscripts/subease-main.git
-cd subease-main
-```
+   ```bash
+   git clone https://github.com/ayushscripts/subease-main.git
+   cd subease-main
+   ```
 2. Install dependencies:
    ```bash
     npm install
     ```
 3. Set up environment variables:
-- Create a .env.local file and add your MongoDB and Clerk credentials.
+   - Create a .env.local file and add your MongoDB and Clerk credentials.
    ```bash
     NEXT_PUBLIC_CLERK_FRONTEND_API=<your-clerk-frontend-api>
     MONGO_DB_URI=<your-mongodb-uri>
