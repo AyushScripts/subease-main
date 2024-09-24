@@ -2,6 +2,9 @@
 
 SubEase is a SaaS product designed to help users track and manage their subscriptions effortlessly. Whether it’s OTT platforms, productivity tools, or other recurring services, SubEase offers a simple dashboard to provide insights into your spending and helps you stay on top of your subscriptions.
 
+## See It Live
+[https://subease.vercel.app](https://subease.vercel.app)
+
 ## Features
 - **Subscription Management**: Easily add, edit, and delete your subscriptions with key details like renewal date, cost, and billing cycle.
 - **Automatic Categorization**: Group subscriptions into categories like entertainment, productivity, and more to get a clear view of where your money goes.
@@ -37,7 +40,7 @@ SubEase is a SaaS product designed to help users track and manage their subscrip
    ```bash
     npm run dev
     ```
-   Visit [http://localhost:3000] to see your application in action.
+   Visit [http://localhost:3000](#) to see your application in action.
 
 ## Contributing:
 We welcome contributions from developers of all skill levels. If you have ideas, feature suggestions, or bug fixes, feel free to open an issue or submit a pull request.
