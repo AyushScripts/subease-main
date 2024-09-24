@@ -69,7 +69,7 @@
 }
 
 .button-bg {
-  @apply bg-gradient-to-r from-[#77A1D3] via-[#79CBCA] to-[#77A1D3] m-2 p-4 text-[#333333] dark:text-[#1e1e1e] text-center uppercase transition-all duration-500 ease-in-out shadow-lg dark:shadow-slate-300/20 rounded-lg;
+  @apply bg-gradient-to-r from-[#77A1D3] via-[#79CBCA] to-[#77A1D3] m-2 text-[#333333] dark:text-[#1e1e1e] text-center uppercase transition-all duration-500 ease-in-out shadow-lg dark:shadow-slate-300/20 rounded-md;
   background-size: 200% auto; /* Custom property */
 }
 

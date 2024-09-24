@@ -23,17 +23,15 @@ const Header = () => {
             <Image src='/subease-light.svg' alt='logo' width={80} height={50} className="dark:hidden"/>
             <Image src='/subease-dark.svg' alt='logo' width={80} height={50} className="hidden dark:block"/>
 
-            {/* <h1 className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              SubEase
-            </h1> */}
+            
           </Link>
           <div className="flex items-center lg:order-2">
             <div className="hidden lg:flex items-center gap-2 ">
               <ModeToggle />
-              <GetStartedButton text="Get Started" size="default" />
+              <GetStartedButton text="Get Started" className="px-4 py-2" />
             </div>
             <div className="lg:hidden ">
-                <GetStartedButton size='sm' text="Get Started" />
+                <GetStartedButton text="Get Started" className="px-4 py-2" />
             </div>
             <Button
               onClick={toggleMenu} // Call toggleMenu on button click

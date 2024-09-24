@@ -18,7 +18,7 @@ const HeroSection = () => {
           SubEase is the ultimate subscription management tool, helping you stay
           on top of your recurring payments and never miss a beat.
         </p>
-        <GetStartedButton className="" size='default' text="Get Started Now" />
+        <GetStartedButton text="Get Started Now" className="px-5 py-4"/>
       </div>
     </section>
   );
