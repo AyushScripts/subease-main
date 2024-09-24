@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1> SubEase </h1>
 
-## Getting Started
+SubEase is a SaaS product designed to help users track and manage their subscriptions effortlessly. Whether it’s OTT platforms, productivity tools, or other recurring services, SubEase offers a simple dashboard to provide insights into your spending and helps you stay on top of your subscriptions.
 
-First, run the development server:
+##Features
+- Subscription Management: Easily add, edit, and delete your subscriptions with key details like renewal date, cost, and billing cycle.
+- Automatic Categorization: Group subscriptions into categories like entertainment, productivity, and more to get a clear view of where your money goes.
+- Spending Insights: Understand how much you're spending on different categories and receive spending analytics.
+- Authentication: Secure login and user management powered by Clerk.
+- MongoDB Integration: Data storage and management built with MongoDB for efficient backend operations.
 
+##Tech Stack
+- Frontend: [Next.js](https://nextjs.org), [React](https://react.dev), [TypeScript](https://typescriptlang.org), [TailwindCSS](https://tailwindcss.com)
+- UI Components: [ShadCn](https://ui.shadcn.com)
+- Backend: [MongoDB](https://mongodb.com) (with future plans for extended backend features)
+- Authentication: [Clerk](https://clerk.com)
+- Hosting: [Vercel](https://vercel.com)
+- Version Control: [Git](https://git-scm.com) & [Github](https://github.com)
+
+##Installation
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/ayushscripts/subease-main.git
+cd subease-main
 ```
+2. Install dependencies:
+   ```bash
+    npm install
+    ```
+3. Set up environment variables:
+- Create a .env.local file and add your MongoDB and Clerk credentials.
+   ```bash
+    NEXT_PUBLIC_CLERK_FRONTEND_API=<your-clerk-frontend-api>
+    MONGO_DB_URI=<your-mongodb-uri>
+    ```
+4. Run the development server:
+   ```bash
+    npm run dev
+    ```
+   Visit [http://localhost:3000] to see your application in action.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+##Contributing:
+We welcome contributions from developers of all skill levels. If you have ideas, feature suggestions, or bug fixes, feel free to open an issue or submit a pull request.
+1. Fork the repository
+2. Create a feature branch: git checkout -b feature-name
+3. Commit your changes: git commit -m 'Add new feature'
+4. Push to the branch: git push origin feature-name
+5. Open a Pull Request
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+##Roadmap
+- Subscription Reports: Send periodic reports to users about their subscription spending.
+- Auto-pay Tracking: Provide reminders for auto-pay subscriptions.
+- Improved Analytics: Deep dive into users’ spending patterns with enhanced visualizations.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+##License
+This project is licensed under the MIT License. See the [LICENSE] file for details.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+##Feedback
+SubEase is free and open to feedback. If you have suggestions or features you'd like to see, [let us know](https://x.com/ayushfromindia)!
