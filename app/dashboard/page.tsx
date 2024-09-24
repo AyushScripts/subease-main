@@ -19,6 +19,7 @@ import { ModeToggle } from "../components/mode-toggle"
 import SocialLinks from "../components/SocialLinks"
 import { UserButton } from "@clerk/nextjs"
 import AddSubscriptionButton from "../components/AddSubscriptionButton"
+import Image from "next/image"
 
 const subscriptions = [
   { name: "Netflix", price: 14.99, renewalDate: "05/15/2023", category: "Entertainment" },
@@ -81,7 +82,10 @@ export default function Dashboard() {
     <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-muted">
       <header className="sticky top-0 z-10 bg-background shadow-sm">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href='/dashboard' className="text-2xl font-bold text-primary">SubEase</Link>
+          <Link href='/dashboard' className="text-2xl font-bold text-primary">
+            <Image src='/subease-light.svg' alt='logo' width={80} height={50} className="dark:hidden"/>
+            <Image src='/subease-dark.svg' alt='logo' width={80} height={50} className="hidden dark:block"/>
+          </Link>
           <div className="flex items-center justify-center gap-2 md:gap-4">
           <ModeToggle />
           <UserButton appearance={{elements: {avatarBox: {width: '2rem', height: '2rem'}}}} />

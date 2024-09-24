@@ -6,6 +6,7 @@ import GetStartedButton from "./GetStartedButton";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { RiMenu3Fill } from "react-icons/ri";
+import Image from "next/image";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage mobile menu visibility
@@ -19,9 +20,12 @@ const Header = () => {
       <nav className=" shadow-md px-4 lg:px-6 py-2.5 ">
         <div className="p-3 flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <Link href="/" className="flex items-center">
-            <h1 className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            <Image src='/subease-light.svg' alt='logo' width={80} height={50} className="dark:hidden"/>
+            <Image src='/subease-dark.svg' alt='logo' width={80} height={50} className="hidden dark:block"/>
+
+            {/* <h1 className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               SubEase
-            </h1>
+            </h1> */}
           </Link>
           <div className="flex items-center lg:order-2">
             <div className="hidden lg:flex items-center gap-2 ">

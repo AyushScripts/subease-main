@@ -130,10 +130,13 @@ export default function AddSubscriptionButton() {
                         <SelectValue placeholder="Currency" />
                       </SelectTrigger>
                       <SelectContent>
+                        <SelectItem value="INR">INR</SelectItem>
                         <SelectItem value="USD">USD</SelectItem>
                         <SelectItem value="EUR">EUR</SelectItem>
                         <SelectItem value="GBP">GBP</SelectItem>
                         <SelectItem value="JPY">JPY</SelectItem>
+                        
+
                       </SelectContent>
                     </Select>
                   )}
