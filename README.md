@@ -1,4 +1,4 @@
-<h1> <b>SubEase</b> </h1>
+<h1> **SubEase** </h1>
 
 SubEase is a SaaS product designed to help users track and manage their subscriptions effortlessly. Whether it’s OTT platforms, productivity tools, or other recurring services, SubEase offers a simple dashboard to provide insights into your spending and helps you stay on top of your subscriptions.
 
