@@ -18,8 +18,11 @@ import {
 import { ModeToggle } from "../components/mode-toggle"
 import SocialLinks from "../components/SocialLinks"
 import { UserButton } from "@clerk/nextjs"
-import AddSubscriptionButton from "../components/AddSubscriptionButton"
+// import AddSubscriptionButton from "../components/AddSubscriptionButton"
 import Image from "next/image"
+
+import { useUser } from '@clerk/nextjs';
+import { useRouter } from 'next/navigation';
 
 const subscriptions = [
   { name: "Netflix", price: 14.99, renewalDate: "05/15/2023", category: "Entertainment" },
@@ -78,6 +81,19 @@ function CategoryBreakdownChart() {
 export default function Dashboard() {
   const totalSpending = subscriptions.reduce((sum, sub) => sum + sub.price, 0)
 
+  const { isSignedIn } = useUser();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!isSignedIn) {
+      router.push('/sign-in');
+    }
+  }, [isSignedIn, router]);
+
+  if (!isSignedIn) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-muted">
       <header className="sticky top-0 z-10 bg-background shadow-sm">
@@ -110,7 +126,7 @@ export default function Dashboard() {
                   <p className="text-3xl font-bold">${totalSpending.toFixed(2)}</p>
                 </div>
                 <div className="md:col-span-2 lg:col-span-1">
-                  <AddSubscriptionButton />
+                  {/* <AddSubscriptionButton /> */}
                 </div>
               </div>
             </CardContent>
