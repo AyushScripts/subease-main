@@ -1,9 +1,10 @@
 import {dbConnect} from "@/lib/dbConnect";
 import User from "@/models/User";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   const {clerkId, email} = await req.json();
+  console.log(clerkId, email)
 
   await dbConnect();
   const user = await User.findOne({ clerkId });
