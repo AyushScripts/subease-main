@@ -1,9 +1,11 @@
+[<img width="198" alt="subease-github-readme" src="https://github.com/user-attachments/assets/9ab812ea-416b-4b43-8712-a05abf66632a">](https://subease.vercel.app)
 <h1> SubEase </h1>
 
 SubEase is a SaaS product designed to help users track and manage their subscriptions effortlessly. Whether it’s OTT platforms, productivity tools, or other recurring services, SubEase offers a simple dashboard to provide insights into your spending and helps you stay on top of your subscriptions.
 
 ## See It Live
-[https://subease.vercel.app](https://subease.vercel.app)
+[https://subease.vercel.app](https://subease.vercel.app) <br/>
+Note: This is the coming soon page. We will deploy the app to production super soon!
 
 ## Features
 - **Subscription Management**: Easily add, edit, and delete your subscriptions with key details like renewal date, cost, and billing cycle.
@@ -13,12 +15,12 @@ SubEase is a SaaS product designed to help users track and manage their subscrip
 - **MongoDB Integration**: Data storage and management built with MongoDB for efficient backend operations.
 
 ## Tech Stack
-- **Frontend**: [Next.js](https://nextjs.org), [React](https://react.dev), [TypeScript](https://typescriptlang.org), [TailwindCSS](https://tailwindcss.com)
-- **UI Components**: [ShadCn](https://ui.shadcn.com)
-- **Backend**: [MongoDB](https://mongodb.com) (with future plans for extended backend features)
-- **Authentication**: [Clerk](https://clerk.com)
-- **Hosting**: [Vercel](https://vercel.com)
-- **Version Control**: [Git](https://git-scm.com) & [Github](https://github.com)
+- **Frontend**: [Next.js](https://nextjs.org), [React](https://react.dev), [TypeScript](https://typescriptlang.org), [TailwindCSS](https://tailwindcss.com).
+- **UI Components**: [ShadCn](https://ui.shadcn.com).
+- **Backend**: [MongoDB](https://mongodb.com) (with future plans for extended backend features).
+- **Authentication**: [Clerk](https://clerk.com).
+- **Hosting**: [Vercel](https://vercel.com).
+- **Version Control**: [Git](https://git-scm.com) & [Github](https://github.com).
 
 ## Installation
 1. Clone the repository:
