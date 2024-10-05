@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import {
   Dialog,
@@ -29,6 +29,8 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { IoIosAdd } from "react-icons/io";
+import axios from "axios";
+import { AnyArray } from "mongoose";
 
 type SubscriptionFormData = {
   name: string;
@@ -42,6 +44,7 @@ type SubscriptionFormData = {
 
 export default function AddSubscriptionButton() {
   const [isOpen, setIsOpen] = useState(false);
+  const [currentUserId, setCurrentUserId] = useState();
   const {
     register,
     handleSubmit,
@@ -51,10 +54,47 @@ export default function AddSubscriptionButton() {
     control,
   } = useForm<SubscriptionFormData>();
 
-  const onSubmit = (data: SubscriptionFormData) => {
+  useEffect(() => {
+    async function getCurrentUser() {
+      const res = await axios.get('api/user/get-clerk-user');
+      setCurrentUserId(res.data.id);
+    }
+
+    getCurrentUser()    
+  }, [currentUserId])
+
+
+  const onSubmit = async (data: SubscriptionFormData) => {
     console.log(data);
+    // try{
+    //   const res = await axios.post('/api/subscription/add', {
+    //     clerkId: currentUserId,
+    //     ...data
+    //   })
+    //   console.log(res)
+    // } catch (error) {
+    //   console.log("ERROR: ", error)
+    // }
+
     setIsOpen(false);
   };
+
+  const handleOnFormSubmit = (e:any) => {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    const name = formData.get("name") as string;
+    const category = formData.get("category") as string;
+    const price = formData.get("price") as unknown as number;
+    const currency = formData.get("currency") as string;
+    const renewalDate = formData.get("renewalDate") as any;
+    const billingCycle = formData.get(
+      "billingCycle"
+    ) as unknown as string;
+    const notes = formData.get("notes") as string;
+
+    console.log(name, category, price, currency, renewalDate, billingCycle)
+  }
 
   const renewalDate = watch("renewalDate");
 
@@ -74,20 +114,7 @@ export default function AddSubscriptionButton() {
           <DialogTitle>Add New Subscription</DialogTitle>
         </DialogHeader>
         <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            const form = e.target as HTMLFormElement;
-            const formData = new FormData(form);
-            const name = formData.get("name") as string;
-            const category = formData.get("category") as string;
-            const price = formData.get("price") as unknown as number;
-            const currency = formData.get("currency") as string;
-            const renewalDate = formData.get("renewalDate") as any;
-            const billingCycle = formData.get(
-              "billingCycle"
-            ) as unknown as string;
-            const notes = formData.get("notes") as string;
-          }}
+          onSubmit={handleOnFormSubmit}
           className="space-y-4"
         >
           <div className="space-y-2">
