@@ -34,7 +34,7 @@ import {
 import { ModeToggle } from "../components/mode-toggle";
 import SocialLinks from "../components/SocialLinks";
 import { UserButton } from "@clerk/nextjs";
-// import AddSubscriptionButton from "../components/AddSubscriptionButton"
+import AddSubscriptionButton from "../components/AddSubscriptionButton"
 import Image from "next/image";
 import axios from "axios";
 
@@ -146,7 +146,7 @@ export default function Dashboard() {
   useEffect(() => {
     async function getCurrentUser() {
       try {
-        const res = await axios.get("/api/get-user");
+        const res = await axios.get("/api/user/get-clerk-user");
         console.log(res.data);
         setUserData((prev) => ({
           ...prev,
@@ -166,7 +166,7 @@ export default function Dashboard() {
     async function storeUserData() {
       if (userData) {
         try {
-          const response = await axios.post("/api/user", userData);
+          const response = await axios.post("/api/user/create", userData);
           console.log(response)
           console.log("Saved user data:", userData);
         } catch (error: any) {
@@ -240,7 +240,7 @@ export default function Dashboard() {
                   </p>
                 </div>
                 <div className="md:col-span-2 lg:col-span-1">
-                  {/* <AddSubscriptionButton /> */}
+                  <AddSubscriptionButton />
                 </div>
               </div>
             </CardContent>
